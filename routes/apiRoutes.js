@@ -12,8 +12,8 @@ router.get("/api/workouts",function(req,res){
         })
 	});
 
-    router.put("/api/workouts/:id", (req, res) => {
-    let id = req.params.id;
+router.put("/api/workouts/:id", (req, res)=>{
+    var id = req.params.id;
 
     db.Workout.findByIdAndUpdate (
         { _id: id },
@@ -25,7 +25,7 @@ router.get("/api/workouts",function(req,res){
         .catch(err => {
             res.json(err)
         })
-    });
+})
 
     router.get("/api/workouts/range", (req, res) => {
         db.Workout.find().sort({day:-1})

@@ -17,7 +17,7 @@ const WorkoutSchema = new Schema({
       name:{
         type: String,
         trim: true,
-        required: "Enter Exercise name"
+        required: "Enter Exercise Name"
       },
       duration:{
         type: Number,
@@ -38,11 +38,7 @@ const WorkoutSchema = new Schema({
       distance:{
         type: Number,
         required: "Enter Exercise distnce"
-      },
-      
-      
-      // type: Schema.Types.ObjectId,
-      // ref: "Exercise"
+      }
     }
   ]
 });
